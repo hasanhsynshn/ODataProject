@@ -15,7 +15,7 @@ namespace StartupProject.Controllers
         [HttpGet(Name = "Filter")]
         public async Task<IActionResult> FilterByQueryStringAsync()
         {
-           var response = await _searchService.ProductSearch();
+           var response = await _searchService.ProductSearchAsync();
 
             if (response != null)
                 return View(response);
