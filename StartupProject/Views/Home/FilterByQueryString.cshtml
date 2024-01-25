@@ -1,0 +1,24 @@
+﻿@using StartupProject.Models
+@model IEnumerable<ProductViewModel> 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+    
+
+<div class="col-md-10">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Price
+            </td>
+            <td>
+                @item.CategoryName
+            </td>
+        </tr>
+    }
+</div>
